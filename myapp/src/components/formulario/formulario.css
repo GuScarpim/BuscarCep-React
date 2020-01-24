@@ -1,0 +1,15 @@
+.btn-lugar {
+    text-align: center;
+    margin-left: 40%;
+    margin-right: 40%;
+    min-width: 200px;
+}
+
+button:nth-child(2) {
+    position: relative;
+    left: 5%;
+}
+button:nth-child(1) {
+    position: relative;
+    right: 5%;
+}
