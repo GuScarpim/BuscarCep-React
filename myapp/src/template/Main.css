@@ -2,3 +2,10 @@ main > div {
     background-color: #FFF;
     box-shadow: 0px 0px 15px #0004;
 }
+
+.error {
+    position: relative;
+    top: -10px;
+    font-size: 14px;
+    color: red !important;
+}

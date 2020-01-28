@@ -8,13 +8,14 @@ import "mdbreact/dist/css/mdb.css";
 import './input.css';
 
 const Input = (props) => {
-    return (
-        <div>
-            <MDBInput label={props.label} type={props.type} value={props.value} valueDefault={props.defaultValue}
-                onChange={props.onChange} maxLength={props.maxLength} id={props.id}
-                icon={props.icon} onIconClick={props.onIconClick} onBlur={props.onBlur}/>
-        </div>
-    )
+  return (
+    <div>
+      <MDBInput label={props.label} type={props.type} value={props.value} valueDefault={props.defaultValue}
+        onChange={props.onChange} maxLength={props.maxLength} id={props.id}
+        icon={props.icon} onIconClick={props.onIconClick} onBlur={props.onBlur} 
+        onKeyUp={props.onKeyUp} />
+    </div>
+  )
 }
 
 export default Input;

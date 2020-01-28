@@ -6,7 +6,6 @@ import 'primereact/resources/themes/nova-light/theme.css';
 import 'primereact/resources/primereact.min.css';
 import 'primeicons/primeicons.css';
 
-
 import MDBInput from '../input/input';
 import { IoIosSearch } from 'react-icons/io'
 import { Growl } from 'primereact/growl';
