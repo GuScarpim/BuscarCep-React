@@ -5,6 +5,9 @@ import { Link } from 'react-router-dom'
 export default props =>
 	<aside className="menu-area">
 		<nav className="menu">
+			<Link to="/index">
+				<i className="fa fa-users"></i> Render comboBox
+			</Link>
 			<Link to="/">
 				<i className="fa fa-home"></i> Buscar CEP
             </Link>

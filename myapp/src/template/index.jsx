@@ -1,7 +1,7 @@
 import './Main.css'
 import React from 'react'
 
-import Formulario from '../components/formulario/formulario'
+import Index from '../components/index/index'
 import Header from './Header'
 
 export default props =>
@@ -9,7 +9,7 @@ export default props =>
 		<Header header="Buscar Endereço" subheader="CEP" icone="fa fa-map icone-header"/>
 		<main className="content container-fluid">
 			<div className="p-5 mt-3">
-				<Formulario />
+				<Index />
 			</div>
 		</main>
 	</React.Fragment>
