@@ -1,14 +1,9 @@
 import React, { Component } from 'react';
 
-import 'primereact/resources/themes/nova-light/theme.css';
-import 'primereact/resources/primereact.min.css';
-import 'primeicons/primeicons.css';
-
 import MDBInput from '../input/input';
 import Select from '../select/select';
 import { IoIosSearch } from 'react-icons/io'
 import Form from 'react-bootstrap/Form'
-
 
 export default class validacao extends Component {
   constructor(props) {
@@ -60,6 +55,14 @@ export default class validacao extends Component {
     }
   }
 
+  validarCnpj = () => {
+    if (this.state.cnpj.length <= 13) {
+      this.setState({ error_cnpj: 'Insira todos os números do cnpj' })
+    } else {
+      this.setState({ error_cnpj: false })
+    }
+  }
+
   validarNome = () => {
     if (this.state.nome.length <= 2) {
       this.setState({ error_nome: 'Insira um nome válido' })
@@ -68,19 +71,16 @@ export default class validacao extends Component {
     }
   }
 
-  validarSenha = (senha) => {
-    // 8 caracteres no mínimo
-    // 1 Letra Maiúscula no mínimo
-    // 1 Número no mínimo
-    // 1 Símbolo no mínimo: $*&@#
-    // Não permiti sequência igual (aa, bb, 44, etc) Gu@198756
-    // console.log(r.test('Gu@198756'));
-  
-    if (this.state.senha != RegExp(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[$*&@#])(?:([0-9a-zA-Z$*&@#])(?!\1)){8,}$/)) {
-      this.setState({ error_senha: 'A senha deve conter letras, número e caractere especial' })
-    } else {
-      this.setState({ error_senha: false })
-    }
+  validarSenha = (e) => {
+    // let re = /(\d{3}|\d{2}|\(\d{2}\))\s*(\d{9}|\d{8})/;
+
+    // if (this.state.senha !== re) {
+    //   this.setState({ error_senha: 'A senha deve conter letras, número e caractere especial' })
+    // }
+    // else {
+    //   this.setState({ error_senha: false })
+    // }
+    this.setState({ senha: this.state.senha.replace(/([^\d\s/-])/g, '')})
   }
 
   validarRg = () => {
@@ -107,35 +107,38 @@ export default class validacao extends Component {
             <MDBInput label="E-mail" type="email" defaultValue={this.email} id="email" />
 
             <MDBInput label="Celular" type="text" value={this.celular} onKeyUp={this.validarCell}
-              onChange={this.onChange} maxLength="11" id="celular" />
-            {this.state.error_celular}
+              onChange={this.onChange} maxLength="12" id="celular" />
+            <span className="error">{this.state.error_celular}</span>
 
           </div>
           <div className="col-sm">
             <MDBInput label="Nome" value={this.nome} onKeyUp={this.validarNome}
               onChange={this.onChange} maxLength="20" id="nome" />
-            {this.state.error_nome}
+            <span className="error">{this.state.error_nome}</span>
 
             <MDBInput label="CPF" value={this.cpf} onKeyUp={this.validarCpf}
               onChange={this.onChange} maxLength="11" id="cpf" />
-            {this.state.error_cpf}
+            <span className="error">{this.state.error_cpf}</span>
 
             <MDBInput label="CNPJ" value={this.cnpj} onKeyUp={this.validarCnpj}
-              onChange={this.onChange} maxLength="11" id="cnpj" />
-            {this.state.error_cnpj}
+              onChange={this.onChange} maxLength="14" id="cnpj" />
+            <span className="error">{this.state.error_cnpj}</span>
           </div>
+
           <div className="col-sm">
             <MDBInput label="Senha" type="text" value={this.senha} onKeyUp={this.validarSenha}
               onChange={this.onChange} maxLength="20" id="senha" />
-            {this.state.error_senha}
+            <span className="error">{this.state.error_senha}</span>
+            {this.state.senha}
 
             <MDBInput label="RG" value={this.rg} onKeyUp={this.validarRg}
               onChange={this.onChange} maxLength="11" id="rg" />
-            {this.state.error_rg}
+            <span className="error">{this.state.error_rg}</span>
 
             <MDBInput label="Data" value={this.data} onKeyUp={this.validarData}
               onChange={this.onChange} maxLength="11" id="data" />
-            {this.state.error_data}
+            <span className="error">{this.state.error_data}</span>
+
             <button onSubmit={this.handleSubmit}> Botao</button>
           </div>
         </div>

@@ -31,6 +31,7 @@ export default class Index extends Component {
                 <option value='1'>Buscar CEP</option>
                 <option value='2'>Validar campos</option>
             </select>
+            <br/><br/><hr/>
             {this.state.selecionar == 1
                 ? <Formulario />
                 : (this.state.selecionar == 2
