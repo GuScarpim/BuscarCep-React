@@ -13,7 +13,7 @@ const Input = (props) => {
       <MDBInput label={props.label} type={props.type} value={props.value} valueDefault={props.defaultValue}
         onChange={props.onChange} maxLength={props.maxLength} id={props.id}
         icon={props.icon} onIconClick={props.onIconClick} onBlur={props.onBlur} 
-        onKeyUp={props.onKeyUp} />
+        onKeyUp={props.onKeyUp} onKeyPress={props.onKeyPress} pattern={props.pattern} required/>
     </div>
   )
 }
