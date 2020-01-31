@@ -1,4 +1,4 @@
-## Esse projeto tem o intuito de auxiliar na criação de projetos em React.js
+## Esse projeto tem o intuito de auxiliar na criação de outros projetos em React.js
 
 Estou disponibilizando alguns componentes dinâmicos. Eu acredito que seja uma das maiores dificuldades de entender como funciona esse tipo de componenete para quem está iniciando nessa linguagem (React.Js).
 
