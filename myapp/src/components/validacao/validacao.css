@@ -1,1 +1,12 @@
+@import "../../../node_modules/@fortawesome/fontawesome-free/css/all.min.css";
+@import "../../../node_modules/bootstrap-css-only/css/bootstrap.min.css";
+@import "../../../node_modules/mdbreact/dist/css/mdb.css";
 
+.botao-enviar {
+    margin-left: 50%;
+    margin-right: 50%;
+    color: #fff;
+    border: solid  #BAE1FF;
+    border-radius: 30px;
+    background-color:#006FC2;
+}

@@ -4,9 +4,11 @@ import 'primereact/resources/themes/nova-light/theme.css';
 import 'primereact/resources/primereact.min.css';
 import 'primeicons/primeicons.css';
 
-import { IoIosSearch } from 'react-icons/io'
-import Formulario from '../formulario/formulario'
-import Validacao from '../validacao/validacao'
+import { IoIosSearch } from 'react-icons/io';
+import Formulario from '../formulario/formulario';
+import Validacao from '../validacao/validacao';
+import TabelaResponsiva from '../tabela/tabela';
+
 
 export default class Index extends Component {
     constructor(props) {
@@ -16,6 +18,27 @@ export default class Index extends Component {
 
     onChange = (e) => {
         this.setState({ selecionar: e.target.value });
+    }
+
+    funcaoSwitch = () => {
+        let selecionar;
+        switch (this.state.selecionar) {
+            case '0':
+                selecionar = ''
+                break;
+            case '1':
+                selecionar = <Formulario />
+                break;
+            case '2':
+                selecionar = <Validacao />
+                break;
+            case '3':
+                selecionar = <TabelaResponsiva />
+                break;
+            default:
+                break;
+        }
+        return selecionar;
     }
 
     render() {
@@ -30,20 +53,10 @@ export default class Index extends Component {
                 <option value='0'>Selecione o Estado</option>
                 <option value='1'>Buscar CEP</option>
                 <option value='2'>Validar campos</option>
+                <option value='3'>Tabela Dinâmica</option>
             </select>
-            <br/><br/><hr/>
-            {this.state.selecionar == 1
-                ? <Formulario />
-                : (this.state.selecionar == 2
-                    ? <Validacao />
-                    : (this.state.selecionar == 0
-                        ? false
-                        : false
-                    )
-                )
-            }
-
-
+            <br /><br /><hr />
+            {this.funcaoSwitch()}
         </div >
     }
 }

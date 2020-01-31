@@ -6,16 +6,16 @@ export default props =>
 	<aside className="menu-area">
 		<nav className="menu">
 			<Link to="/index">
-				<i className="fa fa-users"></i> Render comboBox
+				<i className="fa fa-map"></i> Render comboBox
 			</Link>
 			<Link to="/">
-				<i className="fa fa-home"></i> Buscar CEP
+				<i className="fa fa-home"></i> Buscar endereço (CEP)
             </Link>
 			<Link to="/validacao">
 				<i className="fa fa-users"></i> Validação de usuário
             </Link>
-			<Link to="/teste">
-				<i className="fa fa-users"></i> Outro nome
+			<Link to="/tabela">
+				<i className="fa fa-table"></i> Tabela Dinâmica
             </Link>
 		</nav>
 	</aside>

@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import './validacao.css';
+
 import MDBInput from '../input/input';
 import Select from '../select/select';
 import { IoIosSearch } from 'react-icons/io'
@@ -9,7 +11,6 @@ export default class validacao extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      email: '',
       nome: '',
       senha: '',
       celular: '',
@@ -43,12 +44,9 @@ export default class validacao extends Component {
     }
   }
 
-  validarSenha = () => {
-    if (this.state.senha.length <= 5) {
-      this.setState({ error_senha: 'Insira 5 números' })
-    } else {
-      this.setState({ error_senha: false })
-    }
+  handleSubmit = (e) => {
+    console.log(this.state.nome);
+    e.preventDefault();
   }
 
   render() {
@@ -58,15 +56,15 @@ export default class validacao extends Component {
           <h3><IoIosSearch /> Validar campos</h3>
         </div>
       </div>
-      <Form >
+      <Form onSubmit={this.handleSubmit}>
         <div className="row">
           <div className="col-sm">
             <Select id="uf" label="UF" />
 
-            <MDBInput label="E-mail" type="email" defaultValue={this.email} id="email" />
+            <MDBInput label="E-mail" type="email" defaultValue={this.email} id="id-email" />
 
             <MDBInput label="Celular" value={this.celular} onKeyUp={this.validarCell}
-              onChange={this.onChange} maxLength="12" id="celular" type="tel" />
+              onChange={this.onChange} maxLength="12" id="celular" type="tel" required/>
             <span className="error">{this.state.error_celular}</span>
 
           </div>
@@ -94,11 +92,12 @@ export default class validacao extends Component {
             <MDBInput label="Data" value={this.data} onKeyUp={this.validarData}
               onChange={this.onChange} maxLength="11" id="data" type="date" />
 
-            <button onSubmit={this.handleSubmit}> Botao</button>
           </div>
         </div>
       </Form>
-
+      <div className="posicao-botao">
+        <button className="botao-enviar" type="submit" onClick={this.handleSubmit}> Botao</button>
+      </div>
     </div >
   }
 }
