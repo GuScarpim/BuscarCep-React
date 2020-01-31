@@ -3,17 +3,16 @@ import { Switch, Route, Redirect } from 'react-router'
 
 import MainFormulario from '../template/MainFormulario';
 import MainValidacao from '../template/MainValidacao';
-import Index from '../template/index';
+import MainTabela from '../template/MainTabela';
 
-// import Home from '../components/home/Home'
-// import UserCrud from '../components/user/UserCrud'
-// import Teste1 from '../components/test/teste1'
+import Index from '../template/index';
 
 export default props =>
     <Switch>
         <Route exact path='/' component={MainFormulario} />
         <Route path='/formulario' />
         <Route path='/validacao' component={MainValidacao}/>
+        <Route path='/tabela' component={MainTabela}/>
         <Route path='/index' component={Index}/>
-        <Redirect from='*' to='/' />
+        <Redirect from='*' to='/index' />
     </Switch>
