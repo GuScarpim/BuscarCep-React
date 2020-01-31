@@ -24,7 +24,6 @@ Além das requisições de API, esse projeto tem alguns tipos de validações pa
 
 
 
-## Desenvolvido por Gustavo Scarpim
 
-
-![](readme-projeto-myApp.gif)
+## Desenvolvido por Gustavo Scarpim:
+![Projeto em ação](https://user-images.githubusercontent.com/47616551/73510308-742b5480-43c0-11ea-995e-cfed2c876874.gif)
