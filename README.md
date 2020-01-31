@@ -25,3 +25,6 @@ Além das requisições de API, esse projeto tem alguns tipos de validações pa
 
 
 ## Desenvolvido por Gustavo Scarpim
+
+
+![](readme-projeto-myApp.gif)
