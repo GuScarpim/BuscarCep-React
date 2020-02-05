@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import './validacao.css';
+
 
 import MDBInput from '../input/input';
 import Select from '../select/select';
