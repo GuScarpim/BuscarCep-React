@@ -1,8 +1,8 @@
 import axios from 'axios';
 
-const url = 'https://br-cidade-estado-nodejs.glitch.me/estados'
-export default class ServiceApi {
+const url = 'https://br-cidade-estado-nodejs.glitch.me/estados';
 
+export default class ServiceApi {
   static Buscar(id) {
     return axios.get(url )
       .then((response) => {
@@ -18,5 +18,6 @@ export default class ServiceApi {
       })
       .catch((error) => { return error })
   }
+
 
 }
