@@ -18,7 +18,7 @@ Além das requisições de API, esse projeto tem alguns tipos de validações pa
 
 <b>1º Clone esse projeto no seu computador ou baixe no formato (ZIP).</b>
 
-<b>2º Abra o projeto em seu editor favorito e rode o seguinte comando 'npm install --save ou yarn install' para poder baixar todas as depêndencias do projeto.</b>
+<b>2º Abra o projeto em seu editor favorito e rode o seguinte comando 'npm install ou yarn install' para poder baixar todas as depêndencias do projeto.</b>
 
 <b>3º Rode o comando 'npm start' para inicializar o projeto.</b>
 
