@@ -1,10 +1,12 @@
 import axios from 'axios';
 
-const url = 'https://br-cidade-estado-nodejs.glitch.me/estados';
+const url = axios.create({
+  baseURL: 'https://br-cidade-estado-nodejs.glitch.me'
+});
 
 export default class ServiceApi {
   static Buscar(id) {
-    return axios.get(url )
+    return axios.get('/estados')
       .then((response) => {
         return response.data
       })
@@ -12,7 +14,7 @@ export default class ServiceApi {
   }
 
   static BuscarUf = () => {
-    return axios.get(url )
+    return axios.get('/estados')
       .then((response) => {
         return response.data
       })
