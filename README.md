@@ -1,4 +1,5 @@
 ## Esse projeto tem o intuito de auxiliar na criação de outros componentes em React.js
+## <a href="https://guscarpim.github.io/BuscarCep-React/index" target="blank" >Click aqui para ver o projeto funcionando</a>
 
 Estou disponibilizando alguns componentes dinâmicos. Eu acredito que seja uma das maiores dificuldades de entender como funciona esse tipo de componenete para quem está iniciando nessa linguagem (React.Js).
 
@@ -21,8 +22,6 @@ Além das requisições de API, esse projeto tem alguns tipos de validações pa
 <b>2º Abra o projeto em seu editor favorito e rode o seguinte comando 'npm install ou yarn install' para poder baixar todas as depêndencias do projeto.</b>
 
 <b>3º Rode o comando 'npm start' para inicializar o projeto.</b>
-
-
 
 
 ## Desenvolvido por Gustavo Scarpim:
