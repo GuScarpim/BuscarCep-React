@@ -13,7 +13,8 @@ import Logo from './template/Logo';
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL} >
+      {/* <BrowserRouter basename={process.env.PUBLIC_URL} > */}
       <div className="app">
         <Logo />
         <Nav />
