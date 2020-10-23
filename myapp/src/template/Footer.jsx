@@ -1,10 +1,9 @@
 import './Footer.css'
 import React from 'react'
 
-// Componente funcional
 export default props =>
 	<footer className="footer">
 		<span>
-			Desenvolvido por GuScarpim
+			Desenvolvido por Gustavo Scarpim
 		</span>
 	</footer>
