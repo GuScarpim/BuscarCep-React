@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "6fe1894d8b87057984fbe1c050c22726",
+    "revision": "13cd9fa18a3141b91aaad03d3ff7d1ca",
     "url": "/BuscarCep-React/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/BuscarCep-React/static/css/2.94f3f167.chunk.css"
   },
   {
-    "revision": "50228f1cc2508fbbf858",
+    "revision": "c21aea9ab9678081f0b7",
     "url": "/BuscarCep-React/static/css/main.1c7d2199.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/BuscarCep-React/static/js/2.43cef2c7.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "50228f1cc2508fbbf858",
-    "url": "/BuscarCep-React/static/js/main.8d811338.chunk.js"
+    "revision": "c21aea9ab9678081f0b7",
+    "url": "/BuscarCep-React/static/js/main.7c8c0ff1.chunk.js"
   },
   {
     "revision": "cc09d36bf4758330c369",
