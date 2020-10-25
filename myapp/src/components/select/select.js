@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 
 import './select.css';
-import ServiceApi from '../../services/ServiceApi';
-
+import Axios from 'axios';
+const baseURL = 'https://br-cidade-estado-nodejs.glitch.me/estados';
 export default class Select extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      item: []
+      estados: []
     };
   }
 
@@ -16,10 +16,14 @@ export default class Select extends Component {
   }
 
   buscarEstados = () => {
-    ServiceApi.BuscarUf()
+    Axios.get(baseURL)
       .then(response => {
-        this.setState({ item: response });
+        this.setState({ estados: response.data });
+        console.log('respo', response.data)
+      }).catch(error => {
+        console.log('erro', error)
       })
+    // ServiceApi.BuscarUf()
   }
 
   onChange = (e) => {
@@ -32,7 +36,7 @@ export default class Select extends Component {
         <label className="label"></label>
         <select value={this.props.value} onChange={this.onChange} id={this.props.id}>
           <option>Selecione o Estado</option>
-          {this.state.item.map((item) => (
+          {this.state.estados.map((item) => (
             <option key={item.id} value={item}>{item.estado}</option>
           ))}
         </select>

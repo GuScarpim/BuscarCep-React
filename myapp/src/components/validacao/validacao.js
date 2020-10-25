@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 import './validacao.css';
-
 
 import MDBInput from '../input/input';
 import Select from '../select/select';
 import { IoIosSearch } from 'react-icons/io'
 import Form from 'react-bootstrap/Form'
+import { MDBBtn } from 'mdbreact';
 
 export default class validacao extends Component {
   constructor(props) {
@@ -47,8 +46,7 @@ export default class validacao extends Component {
   }
 
   handleSubmit = (e) => {
-    console.log(this.state.nome);
-    e.preventDefault();
+    alert("Dados enviados com sucesso")
   }
 
   render() {
@@ -66,7 +64,7 @@ export default class validacao extends Component {
             <MDBInput label="E-mail" type="email" defaultValue={this.email} id="id-email" />
 
             <MDBInput label="Celular" value={this.celular} onKeyUp={this.validarCell}
-              onChange={this.onChange} maxLength="12" id="celular" type="tel" required/>
+              onChange={this.onChange} maxLength="12" id="celular" type="tel" required />
             <span className="error">{this.state.error_celular}</span>
 
           </div>
@@ -95,11 +93,9 @@ export default class validacao extends Component {
               onChange={this.onChange} maxLength="11" id="data" type="date" />
 
           </div>
+          <MDBBtn gradient="blue" type="submit" color="blue-grey">Enviar</MDBBtn>
         </div>
       </Form>
-      <div className="posicao-botao">
-        <button className="botao-enviar" type="submit" onClick={this.handleSubmit}> Botao</button>
-      </div>
     </div >
   }
 }

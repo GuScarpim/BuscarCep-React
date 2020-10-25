@@ -8,7 +8,7 @@ export default class ServiceApi {
   static Buscar(id) {
     return axios.get('/estados')
       .then((response) => {
-        return response.data
+        console.log(response.data)
       })
       .catch((error) => { return error })
   }
@@ -20,6 +20,4 @@ export default class ServiceApi {
       })
       .catch((error) => { return error })
   }
-
-
 }
